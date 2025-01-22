@@ -1,0 +1,13 @@
+#node modules
+node_modules
+
+#ts build info
+tsconfig.tsbuildinfo
+
+#generated build
+build
+
+package-lock.json
+
+#environment variables
+.env
