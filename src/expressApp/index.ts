@@ -1,6 +1,6 @@
-import express from 'express';
-import authRoute from "./routes/auth";
-import { homePageForward } from "./utility/forwardRequests";
+import express from "express";
+import authRoute from "../routes/auth";
+import { homePageForward } from "../utility/forwardRequests";
 
 /**
  * making express application
@@ -27,6 +27,6 @@ app.get("/", homePageForward);
 /**
  * app routing
  */
-app.use(authRoute); // auth route
+app.use("/auth", authRoute); // auth route
 
 export default app;

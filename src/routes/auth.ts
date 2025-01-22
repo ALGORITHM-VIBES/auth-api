@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import { authRequestFilter } from '../middleware/authRequestFilter';
 
 const router = Router();
 
-router.get("/home", (req, res) => {
-    res.send("Welcome to /home");
-});
+router.post("/auth/login", authRequestFilter);
 
 export default router;
