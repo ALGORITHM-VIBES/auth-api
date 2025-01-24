@@ -1,18 +1,27 @@
 import { config } from "dotenv";
 import httpServer from "./www/httpServer";
-import { AuthServiceApplication } from "./AuthServiceApp";
+import { AuthenticationServiceApplication } from "./AuthenticationServiceApplication";
 
 /**
- * add environment variables
+ * @description setting up environment variables
  */
 config();
 
 /**
- * setting for env variables
+ * @constant port
+ * @typeof number
  */
 const PORT: number = parseInt(process.env.PORT ?? `3000`);
 
 /**
- * Instance of AuthServiceApplication
+ * @instance AuthenticationServiceApplication
  */
-const authServiceApplication = new AuthServiceApplication(PORT, httpServer);
+const authenticationServiceApplication = new AuthenticationServiceApplication(
+  PORT,
+  httpServer
+);
+
+/**
+ * @description initializing all services if authenticationServiceApplication
+ */
+authenticationServiceApplication.init();

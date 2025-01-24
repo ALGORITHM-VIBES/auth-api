@@ -1,16 +1,14 @@
-import app from "../expressApp";
+import expressApplication from "../expressApplication/expressApplication";
 import { createServer } from "http";
 
 /**
- * creating Http Server with Express App
+ * @constant
+ * @description respossible creating expressApplication to httpServer
  */
-const httpServer = createServer(app);
+const httpServer = createServer(expressApplication);
 
-// /**
-//  * http server hosting & listening
-//  */
-// httpServer.listen(PORT, "127.0.0.1", () => {
-//     console.log(`AUTH_SERVICE running at http://127.0.0.1:${PORT}`);
-// });
-
-export default httpServer;
+/**
+ * @exports
+ * @constant createServer
+ */
+export = httpServer;
