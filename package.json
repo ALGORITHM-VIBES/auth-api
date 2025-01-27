@@ -30,7 +30,6 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
-    "nodemon": "^3.1.9",
     "typescript": "^5.7.3"
   },
   "description": "Simple Auth Service",
